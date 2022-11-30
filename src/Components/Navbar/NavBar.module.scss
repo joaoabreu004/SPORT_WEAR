@@ -1,0 +1,16 @@
+.nav_sw{
+    display: flex;
+    background-color: #F24A72;
+    .lista_links_sw{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        li{
+            color: #FFF;
+            font-weight: 500;
+            margin: 0 4em;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.header_sw{
+    background-color: #1A1A2E;
+    display: flex;
+    height: 25vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10em;
+    .logo_sw{
+        width: 150px;
+        height: 150px;
+    }
+    .nome_sw{
+        color: #fff;
+        font-weight: 900;
+        font-size: 30px;
+    }
+}
