@@ -1,13 +1,14 @@
 .header_sw{
     background-color: #1A1A2E;
     display: flex;
-    height: 25vh;
+    height: 20vh;
     align-items: center;
     justify-content: space-between;
     padding: 0 10em;
+    display: flex;
     .logo_sw{
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
     }
     .nome_sw{
         color: #fff;

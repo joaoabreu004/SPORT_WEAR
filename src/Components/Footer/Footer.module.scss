@@ -1,0 +1,38 @@
+.footer_sw{
+    img{
+        height: 15vh;
+    }
+    background-color: #1A1A2E;
+    color: #fff;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .container_link{
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        .footer_lista_links{
+            list-style: none;
+            display: flex;
+            font-size: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            padding: 0 2em;
+            li{
+                margin: 0 5px;
+                a{
+                    color: #ccc;
+                    transition: 1s;
+    
+                    &:hover{
+                      color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+}

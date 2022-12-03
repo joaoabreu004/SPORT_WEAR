@@ -1,12 +1,10 @@
-import Header from "../../Components/Header";
-import NavBar from "../../Components/Navbar";
+
 
 function Home() {
     return (
-        <>
-            <Header />
-            <NavBar />
-        </>
+        <div>
+            <h2>HOME!</h2>
+        </div>
 
     )
 

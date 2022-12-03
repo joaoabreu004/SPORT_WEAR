@@ -9,8 +9,25 @@
         li{
             color: #FFF;
             font-weight: 500;
+            font-size: 15px;
             margin: 0 4em;
-            cursor: pointer;
+            &::after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background: #FFF;
+                transition: width 0.3s;
+            }
+            &:hover::after{
+                width: 100%;
+                cursor: pointer;
+            }
+
+            .ancor{
+                text-decoration: none;
+                color: #FFF;
+            }
         }
     }
 }
