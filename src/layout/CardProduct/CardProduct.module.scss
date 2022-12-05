@@ -1,0 +1,49 @@
+.card_body{
+    width: 20vw;
+    box-shadow: 6px 0px 10px -5px #000;
+    .card_header{
+        background-color: #FBF6F6;
+        .card_img{
+            width: 100%;
+            background-color: #f6f6f6;
+            min-height: 300px;
+            max-height: 500px;
+        }
+    }
+    .card_main{
+        display: flex;
+        flex-direction: column;
+        background-color: #FBF6F6;
+        align-items: flex-start;
+        line-height: 1px;
+        padding: 10px 10px;
+        .card_title{
+            margin: 1em 0;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .frete_free{
+            color: #26BB35;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .price{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .btn_add{
+            background-color: #26BB35;
+            border: none;
+            padding: 6px;
+            border-radius: 5px;
+            color: #FBF6F6;
+            font-weight: bold;
+            margin: 0 50px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    
+
+}

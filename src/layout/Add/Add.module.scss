@@ -1,0 +1,26 @@
+.container_add{
+    display: flex;
+    width: 30vw;
+    flex-direction: column;
+    .titulo{
+        position: relative;
+        font-weight: 700;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+    }
+    .placa_add{
+        background-color:#54B435; 
+        border-radius: 20px 20px 0 0;
+        z-index: -1; 
+        height: 50vh; 
+        border: 2px solid #000;
+        border-bottom: none;
+        margin: 0 2em;
+    }
+    .add_img{
+        position: relative;
+        z-index: 1;
+        bottom: 50px;
+        width: 100%; 
+    }
+}

@@ -9,7 +9,7 @@ function NavBar() {
                     <Link className={style.ancor} to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link className={style.ancor} to="/camisaTime">CAMISAS DE TIME</Link>
+                    <Link className={style.ancor} to="/vestuario">VESTUÁRIO</Link>
                 </li>
                 <li>
                     <Link className={style.ancor} to="/calcados">CALÇADOS</Link>
