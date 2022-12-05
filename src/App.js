@@ -3,12 +3,12 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import NavBar from './Components/Navbar';
 import Home from './Pages/Home';
-import CamisasTime from './Pages/CamisasTime'
 import Calcados from './Pages/Calcados'
 import Acessorios from './Pages/Acessorios'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Artigos from './Pages/Artigos';
+import Vestuario from './Pages/Vestuario';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path='/' element={<Home/>}></Route>
-          <Route path='/vestuario' element={<CamisasTime/>}></Route>
+          <Route path='/vestuario' element={<Vestuario/>}></Route>
           <Route path='/calcados' element={<Calcados/>}></Route>
           <Route path='/acessorios' element={<Acessorios/>}></Route>
           <Route path='/artigos' element={<Artigos/>}></Route>

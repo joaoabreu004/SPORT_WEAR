@@ -30,7 +30,7 @@ function ListaProdutos(){
             title: "Boné Nike Heritage86",
             img: "https://imgnike-a.akamaihd.net/1920x1920/024006ID.jpg",
             price: "200,00", 
-            category: "Calçados"
+            category: "Acessórios"
           },
           {
             id: 5,
@@ -58,15 +58,16 @@ function ListaProdutos(){
             title: "Camisa Átl.Nacional 20", 
             img: "https://images.mantosdofutebol.com.br/wp-content/uploads/2019/11/Camisas-do-Atl%C3%A9tico-Nacional-2020-Nike-2-1.jpg",
             price: "289,00",
-            category: "Vesturário"
+            category: "Vestuário"
           }
     ]
 
+    
     return(
         <>
             <ul className={style.lista_produtos}>
                 {products.map(product => {
-                    return <li style={{margin: "20px"} }  > <CardProduct title={product.title} img={product.img} price={product.price}/> </li>
+                    return <li style={{margin: "20px"} }  > <CardProduct key={product.id} title={product.title} img={product.img} price={product.price}/> </li>
                 })}
             </ul>
         </>

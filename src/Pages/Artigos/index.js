@@ -1,8 +1,13 @@
+import ListaFiltrar from "../../layout/ListaFiltrar";
+import style from './Artigos.module.scss'
+
 function Artigos() {
     return (
-        <div>
-            <h2>Artigos!</h2>
-        </div>
+       
+        <main className={style.main_container}>
+            <h2>ARTIGOS</h2>
+            <ListaFiltrar categoria="Artigos"/>
+        </main>
 
     )
 

@@ -1,8 +1,16 @@
+import ListaFiltrar from "../../layout/ListaFiltrar";
+import ListaProdutos from "../../layout/ListaProdutos";
+import style from './Calcados.module.scss'
+
 function Calcados() {
     return (
-        <div>
-            <h2>Calçados!</h2>
-        </div>
+
+        <main className={style.main_container}>
+            <h2>CALÇADOS</h2>
+            <ListaFiltrar categoria="Calçados"/>
+        </main>
+
+
 
     )
 
