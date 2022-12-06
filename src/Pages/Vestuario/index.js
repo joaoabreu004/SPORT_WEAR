@@ -1,4 +1,3 @@
-import ListaProdutos from '../../layout/ListaProdutos';
 import style from './Vestuario.module.scss'
 import ListaFiltrar from '../../layout/ListaFiltrar'
 
@@ -13,3 +12,4 @@ function Vestuario() {
 
 }
 export default Vestuario; 
+

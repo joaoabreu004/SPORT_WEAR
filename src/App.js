@@ -9,7 +9,7 @@ import Acessorios from './Pages/Acessorios'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Artigos from './Pages/Artigos';
 import Vestuario from './Pages/Vestuario';
-import Admin from './Pages/Admin';
+import AdminProdutos from './Pages/Admin/AdminProdutos';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Header />
         <NavBar />
         <Routes>
-          <Route path='/admin' element={<Admin/>}></Route>
+          <Route path='/admin/produtos' element={<AdminProdutos/>}></Route>
         </Routes>
         <Routes>
           

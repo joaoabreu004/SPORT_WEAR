@@ -105,6 +105,14 @@ function ListaFiltrar({ categoria }) {
                 img: "https://imgnike-a.akamaihd.net/768x768/0244860L.jpg", 
                 price: "899,00",
                 category: "Calçados"
+            }, 
+            {
+                id: 15, 
+                title: "Bola Nike CBF",
+                img: "https://imgcentauro-a.akamaihd.net/900x900/97096101/bola-de-futebol-de-campo-nike-cbf-flight-sp22-img.jpg", 
+                price: "399,00",
+                category: "Artigos"
+
             }
         ]
 
