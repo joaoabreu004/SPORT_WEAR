@@ -25,7 +25,7 @@ function ListaFiltrar({ categoria }) {
                 id: 3,
                 title: "Camiseta Nike Brasil 22",
                 img: "https://imgnike-a.akamaihd.net/1920x1920/0244217T.jpg",
-                price: "600,00",
+                price: "150,00",
                 category: "Vestuário"
             },
             {
@@ -69,6 +69,42 @@ function ListaFiltrar({ categoria }) {
                 img: "https://panini.com.br/media/catalog/product/0/0/004286ahc2br.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=897&width=960&canvas=960:897", 
                 price: "57,00",
                 category: "Artigos"
+            }, 
+            {
+                id: 10, 
+                title: "Chinelo Adilete", 
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/61fe3434be124b81ad49ab0600c31d43_9366/Chinelo_Adilette_Aqua_(UNISSEX)_Preto_EG1758_01_standard.jpg", 
+                price: "150,00",
+                category: "Calçados"
+            }, 
+            {
+                id: 11, 
+                title: "Camisa Santos 22", 
+                img: "https://d1ulmyt8kny60e.cloudfront.net/Custom/Content/Products/47/10/47104_camisa-santos-brasil-pr-16049-8477_m1_638049198409000732.png", 
+                price: "200,00", 
+                category: "Vestuário"
+            }, 
+            {
+                id: 12, 
+                title: "Camisa Brasil Nike II", 
+                img: "https://imgcentauro-a.akamaihd.net/900x900/M0Q6SW04/camisa-do-brasil-nike-torcedor-pro-ii-22-23-masculina-img.jpg", 
+                price: "349,99", 
+                category: "Vestuário"
+            }, 
+            {
+                id: 13, 
+                title: "Camisa Brasil Nike I",
+                img: "https://imgcentauro-a.akamaihd.net/900x900/M0Q6SV08/camisa-do-brasil-nike-torcedor-pro-i-22-23-masculina-img.jpg", 
+                price: "349,99", 
+                category: "Vestuário"
+
+            }, 
+            {
+                id: 14, 
+                title: "Nike Dunk Low",
+                img: "https://imgnike-a.akamaihd.net/768x768/0244860L.jpg", 
+                price: "899,00",
+                category: "Calçados"
             }
         ]
 
@@ -82,7 +118,6 @@ function ListaFiltrar({ categoria }) {
     }
     
     produtosFiltrados = filtrarCategoria(categoria)
-    console.log(produtosFiltrados)
 
     return (
 

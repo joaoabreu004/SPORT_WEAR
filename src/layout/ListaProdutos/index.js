@@ -22,7 +22,7 @@ function ListaProdutos(){
             id: 3, 
             title: "Camiseta Nike Brasil 22",
             img: "https://imgnike-a.akamaihd.net/1920x1920/0244217T.jpg",
-            price: "600,00",
+            price: "150,00",
             category: "Vestuário"
           },
           {

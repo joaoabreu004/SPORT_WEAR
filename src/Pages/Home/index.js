@@ -2,10 +2,9 @@
 import style from './Home.module.scss'
 import anuncioOne from '../../img/slide1.webp'
 import { FaStar, FaStarHalfAlt } from "react-icons/fa"
-import Add from '../../layout/Add'
-import brasilTshirts from '../../img/addFundoTransparente.png'
 import brasilFlag from '../../img/brasil_flag.png'
 import Produtos from '../../layout/Produtos'
+
 
 
 function Home() {
@@ -16,13 +15,12 @@ function Home() {
                     <img className={style.img_add} src={anuncioOne} />
                 </section>
 
-                <h2>GARRA E CORAGEM, A MARCA DO BRASIL!</h2>
 
 
                 <section className={style.hexa_decoration}>
 
-                    <Add titulo="CAMISAS BRASIL 2022" src={brasilTshirts} />
                     <div className={style.copa_2022}>
+                        <h2>GARRA E CORAGEM, A MARCA DO BRASIL!</h2>
                         <ul className={style.hexa_decoration_list}>
                             <li className={style.hexa_decoration_item}><FaStar /></li>
                             <li className={style.hexa_decoration_item}><FaStar /></li>
