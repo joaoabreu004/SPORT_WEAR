@@ -2,7 +2,7 @@
   "produtos": [
     {
       "id": 1,
-      "title": "Chinela Havaianas Brasil",
+      "title": "Chinelo Havaianas Brasil",
       "img": "https://havaianas.com.br/dw/image/v2/BDDJ_PRD/on/demandware.static/-/Sites-havaianas-master/default/dwc8151cd6/product-images/4000032_0001_HAVAIANAS%20BRASIL_C.png?sw=680&sh=680",
       "price": "47,00",
       "category": "Calçados"
@@ -107,10 +107,24 @@
     },
     {
       "id": 16,
-      "title": "CAMISA CROÁCIA 22",
+      "title": "Camisa Croácia 22",
       "img": "https://imgnike-a.akamaihd.net/768x768/02313251.jpg",
       "price": "150,00",
       "category": "Vestuário"
+    },
+    {
+      "title": "Camisa Corinthians 22",
+      "img": "https://static.shoptimao.com.br/produtos/camisa-corinthians-ii-2223-sn-torcedor-nike-masculina/26/2IC-7507-226/2IC-7507-226_zoom1.jpg?ts=1652216074&ims=544x",
+      "price": "209,99",
+      "category": "Vestuário",
+      "id": 17
+    },
+    {
+      "title": "Boné Real Madrid",
+      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/49bf3e724d454df59bfcadf601281657_9366/Bone_Baseball_Real_Madrid_Branco_H59684_01_standard.jpg",
+      "price": "199,99",
+      "category": "Acessórios",
+      "id": 18
     }
   ]
 }
