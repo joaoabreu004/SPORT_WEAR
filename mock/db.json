@@ -104,6 +104,13 @@
       "img": "https://imgcentauro-a.akamaihd.net/900x900/97096101/bola-de-futebol-de-campo-nike-cbf-flight-sp22-img.jpg",
       "price": "399,00",
       "category": "Artigos"
+    },
+    {
+      "id": 16,
+      "title": "CAMISA CROÁCIA 22",
+      "img": "https://imgnike-a.akamaihd.net/768x768/02313251.jpg",
+      "price": "150,00",
+      "category": "Vestuário"
     }
   ]
 }

@@ -1,5 +1,4 @@
 import ListaFiltrar from "../../layout/ListaFiltrar";
-import ListaProdutos from "../../layout/ListaProdutos";
 import style from './Calcados.module.scss'
 
 function Calcados() {
