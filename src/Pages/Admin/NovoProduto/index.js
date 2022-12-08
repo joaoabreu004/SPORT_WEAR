@@ -95,8 +95,8 @@ function NovoProduto() {
                 <FormControl>
                     <InputLabel id="demo-multiple-name-label">CATEGORIA</InputLabel>
                     <Select
+                        required
                         className={style.input_textos}
-
                         labelId="demo-multiple-name-label"
                         id="demo-multiple-name"
                         value={categoria}

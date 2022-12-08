@@ -25,16 +25,29 @@ function AdminProdutos() {
     }, []);
 
 
+    const excluirProduto = (id) => {
+        fetch(`http://localhost:3000/produtos/${id}`, {
+            method: 'DELETE'
+        })
+        .then((response) => response.json())
+        .then(() => {
+            const lista = produtos.filter((produto) => 
+                produto.id !== id 
+            )
+            setProdutos([...lista])
+        })
+        .catch((error) => alert(error))
+    }
 
 
     const StyledTableCell = styled(TableCell)(({ theme }) => ({
-        [`&.${tableCellClasses.head}`]: {
+        [`&.${ tableCellClasses.head }`]: {
             backgroundColor: theme.palette.common.black,
             color: theme.palette.common.white,
             fontSize: 20,
             textAlign: "end",
         },
-        [`&.${tableCellClasses.body}`]: {
+        [`&.${ tableCellClasses.body } `]: {
             textAlign: "end",
             fontWeight: "bold"
         },
@@ -64,10 +77,9 @@ function AdminProdutos() {
                                     <StyledTableCell>{produto.title}</StyledTableCell>
                                     <StyledTableCell>{produto.price}</StyledTableCell>
                                     <StyledTableCell>{produto.category}</StyledTableCell>
-                                    <StyledTableCell sx={{ textAlign: "center" }}><Button color="warning" variant="text"><FaTools /></Button></StyledTableCell>
-                                    <StyledTableCell sx={{ textAlign: "center" }}><Button color="error" variant="text"><FaTrashAlt /></Button></StyledTableCell>
+                                    <StyledTableCell sx={{ textAlign: "center" }}><Button onClick={() => console.log("CLICADO" + produto.id)} color="warning" variant="text"><FaTools /></Button></StyledTableCell>
+                                    <StyledTableCell sx={{ textAlign: "center" }}><Button onClick={() => excluirProduto(produto.id)} color="error" variant="text"><FaTrashAlt /></Button></StyledTableCell>
                                 </TableRow>
-
                             )}
                         </TableBody>
                     </Table>
