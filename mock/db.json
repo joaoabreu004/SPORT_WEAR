@@ -8,18 +8,60 @@
       "id": 1
     },
     {
-      "title": "CAMISA BRASIL II 22",
+      "title": "CAMISA BRASIL I 22",
       "img": "https://imgcentauro-a.akamaihd.net/900x900/M0Q6SV08/camisa-do-brasil-nike-torcedor-pro-i-22-23-masculina-img.jpg",
       "price": "349,99",
       "category": "Vestuário",
       "id": 2
     },
     {
-      "title": "CAMISA BRASIL II 22",
-      "img": "https://imgnike-a.akamaihd.net/768x768/02263615.jpg",
-      "price": "349,99",
-      "category": "Vestuário",
+      "title": "Mochila Nike BAG",
+      "img": "https://static.netshoes.com.br/produtos/mochila-nike-stash/26/2IC-3606-026/2IC-3606-026_zoom1.jpg?ts=1630602162&ims=544x",
+      "price": "159,99",
+      "category": "Acessórios",
       "id": 3
+    },
+    {
+      "title": "Camisa Espanha 2010",
+      "img": "http://d3ugyf2ht6aenh.cloudfront.net/stores/002/037/962/products/269e4f111-f56c51cb3fc2f14bba16528962155324-640-0.jpg",
+      "price": "150,00",
+      "category": "Vestuário",
+      "id": 4
+    },
+    {
+      "title": "Boné Lacoste",
+      "img": "https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-BRECOM-Site/Sites-master/pt_BR/dwee0e5527/RK4709_031_24.jpg?imwidth=915&impolicy=product",
+      "price": "269,99",
+      "category": "Acessórios",
+      "id": 5
+    },
+    {
+      "title": "Nike Pro",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6446c05d-7efa-40ac-8150-0cd0d9889018/pro-dri-fit-mens-tight-fit-long-sleeve-top-CbgK8B.png",
+      "price": "270,00",
+      "category": "Vestuário",
+      "id": 6
+    },
+    {
+      "title": "Nike Regata",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/67cdefdd-bc7c-4511-a067-cf602aa0fec3/pro-dri-fit-mens-slim-fit-sleeveless-top-xzN4WR.png",
+      "price": "169,00",
+      "category": "Vestuário",
+      "id": 7
+    },
+    {
+      "title": "CAMISA TEAMGS FLA",
+      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9421b7eff0404874b969adf00144ccbc_9366/Camisa_Teamgeist_CR_Flamengo_Masculina_Vermelho_H18336_01_laydown.jpg",
+      "price": "200,00",
+      "category": "Vestuário",
+      "id": 8
+    },
+    {
+      "title": "BOLA OFICIAL COPA",
+      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/28530d07245942fc944dae680084fb30_9366/Bola_Al_Rihla_Pro_Branco_H57783_01_standard.jpg",
+      "price": "99,99",
+      "category": "Artigos",
+      "id": 9
     }
   ]
 }

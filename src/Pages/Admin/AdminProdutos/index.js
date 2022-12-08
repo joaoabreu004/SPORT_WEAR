@@ -4,6 +4,8 @@ import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import { useEffect, useState } from "react";
 import { FaTrashAlt, FaTools } from "react-icons/fa"
 import style from "./AdminProdutos.module.scss"
+import { Link } from "react-router-dom";
+
 
 
 
@@ -58,7 +60,7 @@ function AdminProdutos() {
         <section className={style.sectionLista}>
             <h2>TABELA DE PRODUTOS</h2>
             <Paper sx={{ width: '90%', boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2);" }}>
-                <TableContainer sx={{maxHeight: 500}}>
+                <TableContainer >
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>
                             <TableRow sx={{ backgroundColor: "#000", color: "#fff" }}>
@@ -77,7 +79,7 @@ function AdminProdutos() {
                                     <StyledTableCell>{produto.title}</StyledTableCell>
                                     <StyledTableCell>{produto.price}</StyledTableCell>
                                     <StyledTableCell>{produto.category}</StyledTableCell>
-                                    <StyledTableCell sx={{ textAlign: "center" }}><Button onClick={() => console.log("CLICADO" + produto.id)} color="warning" variant="text"><FaTools /></Button></StyledTableCell>
+                                    <StyledTableCell sx={{ textAlign: "center" }}><Button color="warning" variant="text"><Link to={`/admin/produtos/novo/${produto.id}`}><FaTools /></Link></Button></StyledTableCell>
                                     <StyledTableCell sx={{ textAlign: "center" }}><Button onClick={() => excluirProduto(produto.id)} color="error" variant="text"><FaTrashAlt /></Button></StyledTableCell>
                                 </TableRow>
                             )}

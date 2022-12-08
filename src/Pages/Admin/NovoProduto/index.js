@@ -1,7 +1,8 @@
 import { Typography, TextField, Card, CardContent, Button, CardActions, Select, InputLabel, FormControl, OutlinedInput, MenuItem, } from "@mui/material";
 import { Box, styled } from "@mui/system";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from './NovoProduto.module.scss'
+import { useParams } from 'react-router-dom'
 function NovoProduto() {
 
     const [titulo, setTitulo] = useState("")
@@ -9,10 +10,29 @@ function NovoProduto() {
     const [preco, setPreco] = useState("")
     const [categoria, setCategoria] = useState("")
 
+    //OBTER O PARÂMETRO ENVIADO
+    let params = useParams();
+
+    useEffect(() => {
+        if (params.id) {
+            fetch(`http://localhost:3000/produtos/${params.id}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+                    setTitulo(data.title)
+                    setImagem(data.img)
+                    setPreco(data.price)
+                    setCategoria(data.category)
+                })
+                .catch((error) => alert(error))
+        }
+
+    }, [params]);
+
+
+
 
     const categorias = ["Vestuário", "Artigos", "Acessórios", "Calçados"]
-    var produto = {}
-
 
 
     const CamposTexto = styled(TextField)({
@@ -27,39 +47,59 @@ function NovoProduto() {
     const criarDados = (e) => {
         e.preventDefault();
 
-
-
         var title = titulo
         var img = imagem
         var price = preco
         var category = categoria
 
         const produto = {
-            title ,
+            title,
             img,
             price,
             category
         }
 
 
-        fetch('http://localhost:3000/produtos', {
-            method: 'POST', // or 'PUT'
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(produto),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log('Success:', data);
-                setTitulo("")
-                setImagem("")
-                setPreco("")
-                setCategoria("")
+
+        if (params.id) {
+            fetch(`http://localhost:3000/produtos/${params.id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(produto),
             })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
+                .then((response) => response.json())
+                .then((data) =>
+                    alert(`Produto: ${titulo} atualizado com sucesso! `)
+                )
+                .catch((err) => console.log(err))
+
+        } else {
+
+            fetch('http://localhost:3000/produtos', {
+                method: 'POST', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(produto),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log('Success:', data);
+                    alert(`Produto: ${titulo} criado com sucesso! `)
+                    setTitulo("")
+                    setImagem("")
+                    setPreco("")
+                    setCategoria("")
+
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+
+
     }
 
 
@@ -111,7 +151,7 @@ function NovoProduto() {
                         ))}
                     </Select>
                     <Button variant="contained" type="submit" color="success" sx={{ "color": "#fff", "width": "100%", "margin": "10px 0 " }}>
-                        CRIAR AGORA
+                        SALVAR
                     </Button>
                 </FormControl>
             </form>

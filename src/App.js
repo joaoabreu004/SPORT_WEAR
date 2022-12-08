@@ -21,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/admin/produtos' element={<AdminProdutos/>}></Route>
           <Route path='/admin/produtos/novo' element={<NovoProduto/>}></Route>
+          <Route path='/admin/produtos/novo/:id' element={<NovoProduto/>}></Route>
         </Routes>
         <Routes>
           
