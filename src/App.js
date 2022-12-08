@@ -1,15 +1,16 @@
 import './App.css';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import NavBar from './Components/Navbar';
-import Home from './Pages/Home';
-import Calcados from './Pages/Calcados'
-import Acessorios from './Pages/Acessorios'
+import Footer from './components/Footer';
+import Header from './components/Header';
+import NavBar from './components/Navbar';
+import Home from  "./pages/Home";
+import Calcados from './pages/Calcados'
+import Acessorios from './pages/Acessorios'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Artigos from './Pages/Artigos';
-import Vestuario from './Pages/Vestuario';
-import AdminProdutos from './Pages/Admin/AdminProdutos';
+import Artigos from './pages/Artigos';
+import Vestuario from './pages/Vestuario';
+import AdminProdutos from './pages/Admin/AdminProdutos';
+import NovoProduto from './pages/Admin/NovoProduto';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/admin/produtos' element={<AdminProdutos/>}></Route>
+          <Route path='/admin/produtos/novo' element={<NovoProduto/>}></Route>
         </Routes>
         <Routes>
           
@@ -34,7 +36,7 @@ function App() {
 
     </div>
 
-  )
+  ) 
 }
 
 export default App;

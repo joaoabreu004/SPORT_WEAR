@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles'
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import { useEffect, useState } from "react";
 import { FaTrashAlt, FaTools } from "react-icons/fa"
-
+import style from "./AdminProdutos.module.scss"
 
 
 
@@ -42,10 +42,10 @@ function AdminProdutos() {
 
 
     return (
-        <section>
-            <h2>NOSSOS PRODUTOS</h2>
-            <Paper sx={{ width: '75%', boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2);" }}>
-                <TableContainer sx={{ maxHeight: 500 }}>
+        <section className={style.sectionLista}>
+            <h2>TABELA DE PRODUTOS</h2>
+            <Paper sx={{ width: '90%', boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2);" }}>
+                <TableContainer sx={{maxHeight: 500}}>
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>
                             <TableRow sx={{ backgroundColor: "#000", color: "#fff" }}>
