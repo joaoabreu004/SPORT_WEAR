@@ -1,14 +1,7 @@
 {
   "produtos": [
     {
-      "title": "Mala Nike Brasília",
-      "img": "https://static.netshoes.com.br/produtos/mala-nike-brasilia-duff-95/26/2IC-5668-026/2IC-5668-026_zoom1.jpg?ts=1642757218&ims=544x",
-      "price": "200,00",
-      "category": "Acessórios",
-      "id": 1
-    },
-    {
-      "title": "CAMISA BRASIL I 22",
+      "title": "CAMISA BRASIL 2022",
       "img": "https://imgcentauro-a.akamaihd.net/900x900/M0Q6SV08/camisa-do-brasil-nike-torcedor-pro-i-22-23-masculina-img.jpg",
       "price": "349,99",
       "category": "Vestuário",
@@ -31,23 +24,16 @@
     {
       "title": "Boné Lacoste",
       "img": "https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-BRECOM-Site/Sites-master/pt_BR/dwee0e5527/RK4709_031_24.jpg?imwidth=915&impolicy=product",
-      "price": "269,99",
+      "price": "290,00",
       "category": "Acessórios",
       "id": 5
     },
     {
-      "title": "Nike Pro",
+      "title": "Nike Pro Térmica",
       "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6446c05d-7efa-40ac-8150-0cd0d9889018/pro-dri-fit-mens-tight-fit-long-sleeve-top-CbgK8B.png",
-      "price": "270,00",
+      "price": "265,00",
       "category": "Vestuário",
       "id": 6
-    },
-    {
-      "title": "Nike Regata",
-      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/67cdefdd-bc7c-4511-a067-cf602aa0fec3/pro-dri-fit-mens-slim-fit-sleeveless-top-xzN4WR.png",
-      "price": "169,00",
-      "category": "Vestuário",
-      "id": 7
     },
     {
       "title": "CAMISA TEAMGS FLA",
@@ -57,11 +43,39 @@
       "id": 8
     },
     {
-      "title": "BOLA OFICIAL COPA",
-      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/28530d07245942fc944dae680084fb30_9366/Bola_Al_Rihla_Pro_Branco_H57783_01_standard.jpg",
-      "price": "99,99",
-      "category": "Artigos",
+      "title": "CAMISA SPFC 2022",
+      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0a03cc49e92d410c88fbae1c00c5aef6_9366/Camisa_1_Sao_Paulo_FC_22_Branco_HA8425_01_laydown.jpg",
+      "price": "299,99",
+      "category": "Vestuário",
       "id": 9
+    },
+    {
+      "title": "AF1 Mushroom",
+      "img": "https://imgnike-a.akamaihd.net/768x768/0245043X.jpg",
+      "price": "999,99",
+      "category": "Calçados",
+      "id": 11
+    },
+    {
+      "title": "CAMISA BRASIL 22",
+      "img": "https://imgnike-a.akamaihd.net/768x768/02263615.jpg",
+      "price": "349,99",
+      "category": "Vestuário",
+      "id": 12
+    },
+    {
+      "title": "Calça Brasil 2022",
+      "img": "https://imgnike-a.akamaihd.net/768x768/02258815.jpg",
+      "price": "300,00",
+      "category": "Vestuário",
+      "id": 13
+    },
+    {
+      "title": "AF1",
+      "img": "https://artwalk.vteximg.com.br/arquivos/ids/229172-1000-1000/Tenis-Nike-Air-Force-1-07-Le-Masculino-Branco.jpg?v=637438982802100000",
+      "price": "799,99",
+      "category": "Calçados",
+      "id": 14
     }
   ]
 }

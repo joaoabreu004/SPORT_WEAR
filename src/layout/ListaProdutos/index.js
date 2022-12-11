@@ -8,7 +8,7 @@ function ListaProdutos() {
 
   //OBTER TODOS OS PRODUTOS 
   useEffect(() => {
-    fetch("http://localhost:3000/produtos")
+    fetch("http://localhost:8080/produtos")
       .then(resp => resp.json())
       .then(resp => {
         setProdutos(resp)

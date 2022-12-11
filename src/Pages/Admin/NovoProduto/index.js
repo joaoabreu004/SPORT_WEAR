@@ -15,12 +15,12 @@ function NovoProduto() {
 
     useEffect(() => {
         if (params.id) {
-            fetch(`http://localhost:3000/produtos/${params.id}`)
+            fetch(`http://localhost:8080/produtos/${params.id}`)
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log(data)
-                    setTitulo(data.title)
-                    setImagem(data.img)
+                    console.log("TESTE API" + data)
+                    setTitulo(data.title) 
+                    setImagem(data.img) 
                     setPreco(data.price)
                     setCategoria(data.category)
                 })
@@ -62,7 +62,7 @@ function NovoProduto() {
 
 
         if (params.id) {
-            fetch(`http://localhost:3000/produtos/${params.id}`, {
+            fetch(`http://localhost:8080/produtos/${params.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -70,14 +70,18 @@ function NovoProduto() {
                 body: JSON.stringify(produto),
             })
                 .then((response) => response.json())
-                .then((data) =>
+                .then((data) => {
                     alert(`Produto: ${titulo} atualizado com sucesso! `)
-                )
+                    setTitulo("")
+                        setImagem("")
+                        setPreco("")
+                        setCategoria("")
+                })
                 .catch((err) => console.log(err))
 
         } else {
 
-            fetch('http://localhost:3000/produtos', {
+            fetch('http://localhost:8080/produtos', {
                 method: 'POST', // or 'PUT'
                 headers: {
                     'Content-Type': 'application/json'
@@ -112,12 +116,14 @@ function NovoProduto() {
                         className={style.input_textos}
                         id="filled-basic"
                         label="NOME PRODUTO"
+                        name="title"
                         value={titulo}
                         required
                         onChange={(e) => setTitulo(e.target.value)} />
                     <TextField
                         className={style.input_textos}
                         id="filled-basic"
+                        name="img"
                         label="URL IMG"
                         value={imagem}
                         required
@@ -128,6 +134,7 @@ function NovoProduto() {
                         id="filled-basic"
                         label="PREÇO"
                         required
+                        name="price"
                         value={preco}
                         onChange={(e) => setPreco(e.target.value)}
                     />
@@ -139,6 +146,7 @@ function NovoProduto() {
                         className={style.input_textos}
                         labelId="demo-multiple-name-label"
                         id="demo-multiple-name"
+                        name="category"
                         value={categoria}
                         onChange={handleChange}
                         sx={{ textAlign: "left" }}
