@@ -1,10 +1,10 @@
-import { TableContainer, TableHead, TableRow, Paper, Table, TableBody, Button } from "@mui/material";
-import { styled } from '@mui/material/styles'
+import { Button, Paper, Stack, Table, TableBody, TableContainer, TableHead, TableRow } from "@mui/material";
+import { styled } from '@mui/material/styles';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import { useEffect, useState } from "react";
-import { FaTrashAlt, FaTools } from "react-icons/fa"
-import style from "./AdminProdutos.module.scss"
+import { FaTools, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import style from "./AdminProdutos.module.scss";
 
 
 
@@ -31,28 +31,29 @@ function AdminProdutos() {
         fetch(`http://localhost:8080/produtos/${id}`, {
             method: 'DELETE'
         })
-        .then(() => {
-            const lista = produtos.filter((produto) => 
-                produto.id !== id 
-            )
-            setProdutos([...lista])
-        })
-        .catch((error) => alert(error))
+            .then(() => {
+                const lista = produtos.filter((produto) =>
+                    produto.id !== id
+                )
+                setProdutos([...lista])
+            })
+            .catch((error) => alert(error))
     }
 
 
     const StyledTableCell = styled(TableCell)(({ theme }) => ({
-        [`&.${ tableCellClasses.head }`]: {
+        [`&.${tableCellClasses.head}`]: {
             backgroundColor: theme.palette.common.black,
             color: theme.palette.common.white,
             fontSize: 20,
             textAlign: "end",
         },
-        [`&.${ tableCellClasses.body } `]: {
+        [`&.${tableCellClasses.body} `]: {
             textAlign: "end",
             fontWeight: "bold"
         },
     }));
+
 
 
     return (
@@ -86,6 +87,9 @@ function AdminProdutos() {
                     </Table>
                 </TableContainer>
             </Paper>
+            <Stack direction="row" className={style.buttonSection}>
+                <Button variant="contained" className={style.buttonLink}><Link className={style.link} to={`/admin/produtos/novo`}>CADASTRAR PRODUTO</Link></Button>
+            </Stack>
 
 
 
