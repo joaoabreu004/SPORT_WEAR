@@ -60,7 +60,7 @@ function AdminProdutos() {
         <section className={style.sectionLista}>
             <h2>TABELA DE PRODUTOS</h2>
             <Paper sx={{ width: '90%', boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2);" }}>
-                <TableContainer >
+                <TableContainer sx={{maxHeight: 640}}>
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>
                             <TableRow sx={{ backgroundColor: "#000", color: "#fff" }}>

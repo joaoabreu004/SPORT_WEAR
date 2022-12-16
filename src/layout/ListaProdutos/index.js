@@ -19,12 +19,15 @@ function ListaProdutos() {
 
 
 
-  
+  // COMPARAÇÃO produtos.sort(() => 0.5 - Math.random
+  const produtosRecomendados = produtos.sort(() => 0.5 - Math.random()).splice(0, 4 )
+
 
   return (
     <>
+      {console.log(produtosRecomendados)}
       <ul className={style.lista_produtos}>
-        {produtos.map(product => {
+        {produtosRecomendados.map(product => {
           return <li style={{ margin: "20px" }}  > <CardProduct key={product.id} title={product.title} img={product.img} price={product.price} /> </li>
         })}
       </ul>

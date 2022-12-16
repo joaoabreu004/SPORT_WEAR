@@ -34,7 +34,7 @@ function Home() {
                     </div>
                 </section>
             </div>
-            <Produtos titulos="NOSSOS PRODUTOS"></Produtos>
+            <Produtos titulos="PRODUTOS DESTACADOS"></Produtos>
 
         </main>
 
