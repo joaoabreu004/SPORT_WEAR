@@ -71,7 +71,6 @@ function NovoProduto() {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    alert(`Produto: ${titulo} atualizado com sucesso! `)
                     setTitulo("")
                     setImagem("")
                     setPreco("")
@@ -91,7 +90,6 @@ function NovoProduto() {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    alert(`Produto: ${titulo} criado com sucesso! `)
                     setTitulo("")
                     setImagem("")
                     setPreco("")

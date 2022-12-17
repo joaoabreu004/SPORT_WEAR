@@ -1,7 +1,7 @@
 import { Button, Paper, Stack, Table, TableBody, TableContainer, TableHead, TableRow } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaTools, FaTrashAlt } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import style from "./AdminProdutos.module.scss";
@@ -57,6 +57,22 @@ function AdminProdutos() {
         },
     }));
 
+    const mensagemSalvo = document.querySelector('#mensagemSalvo');
+
+
+
+    // useRef
+    //useRefretorna um objeto ref mutável cuja .currentpropriedade é inicializada com o argumento passado ( initialValue). O objeto retornado persistirá durante todo o tempo de vida do componente. Permitindo que eu use um elemento do DOM
+    const domElement = useRef(null)
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            domElement.current.classList.add(`${style.inativel}`)
+        }, 3000);
+        return () => {};
+    });
+    
 
 
 
@@ -67,13 +83,12 @@ function AdminProdutos() {
             {/* RENDERIZAÇÃO CONDICIONAL */}
             {
                 state != undefined &&
-                <div className={style.produtoSalvo}>
+                <div className={style.produtoSalvo} id='mensagemSalvo' ref={domElement}>
                     <FaCheckCircle />
                     <p>  {`Produto ${state.titulo}, ${state.description} com sucesso!`}</p>
                     <FaCheckCircle />
                 </div>
             }
-
             <Paper sx={{ width: '90%', boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2);" }}>
                 <TableContainer sx={{ maxHeight: 440 }}>
                     <Table stickyHeader aria-label="sticky table">

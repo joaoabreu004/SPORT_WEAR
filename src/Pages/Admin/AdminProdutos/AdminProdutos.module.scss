@@ -3,9 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em 0; 
-    .produtoSalvo{
-        display:none;
+    padding: 2em 0;
+
+    .produtoSalvo {
+        display: none;
         background-color: #26BB35;
         padding: 7px;
         border-radius: 2px;
@@ -17,7 +18,15 @@
         justify-content: space-around;
         margin: 10px 0;
         width: 30vw;
+        &:hover {
+            cursor: pointer;
+        }
     }
+    .inativel{
+        transition: 5ms;
+        display: none;
+    }
+
     .buttonSection {
         margin: 1em 0;
         width: 100%;
