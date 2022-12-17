@@ -3,10 +3,9 @@ import { styled } from '@mui/material/styles';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import { useEffect, useState } from "react";
 import { FaTools, FaTrashAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import style from "./AdminProdutos.module.scss";
-
-
+import { FaCheckCircle } from 'react-icons/fa';
 
 
 
@@ -15,13 +14,17 @@ function AdminProdutos() {
     const [produtos, setProdutos] = useState([])
 
 
+    const { state } = useLocation()
+
+
+
+
     //OBTER TODOS OS PRODUTOS 
     useEffect(() => {
         fetch("http://localhost:8080/produtos")
             .then(resp => resp.json())
             .then(resp => {
                 setProdutos(resp)
-                console.log(produtos)
             })
             .catch(err => console.error(err))
     }, []);
@@ -56,11 +59,23 @@ function AdminProdutos() {
 
 
 
+
+
     return (
         <section className={style.sectionLista}>
             <h2>TABELA DE PRODUTOS</h2>
+            {/* RENDERIZAÇÃO CONDICIONAL */}
+            {
+                state != undefined &&
+                <div className={style.produtoSalvo}>
+                    <FaCheckCircle />
+                    <p>  {`Produto ${state.titulo}, ${state.description} com sucesso!`}</p>
+                    <FaCheckCircle />
+                </div>
+            }
+
             <Paper sx={{ width: '90%', boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2);" }}>
-                <TableContainer sx={{maxHeight: 640}}>
+                <TableContainer sx={{ maxHeight: 440 }}>
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>
                             <TableRow sx={{ backgroundColor: "#000", color: "#fff" }}>

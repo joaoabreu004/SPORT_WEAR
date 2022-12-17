@@ -24,7 +24,6 @@ function App() {
           <Route path='/admin/produtos/novo/:id' element={<NovoProduto/>}></Route>
         </Routes>
         <Routes>
-          
           <Route exact path='/' element={<Home/>}></Route>
           <Route path='/vestuario' element={<Vestuario/>}></Route>
           <Route path='/calcados' element={<Calcados/>}></Route>

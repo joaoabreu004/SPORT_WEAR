@@ -1,10 +1,11 @@
-import { Typography, TextField, Card, CardContent, Button, CardActions, Select, InputLabel, FormControl, OutlinedInput, MenuItem, } from "@mui/material";
+import { Typography, TextField,  Button, Select, InputLabel, FormControl, OutlinedInput, MenuItem, } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import style from './NovoProduto.module.scss'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 function NovoProduto() {
 
+    const navigate = useNavigate()
     const [titulo, setTitulo] = useState("")
     const [imagem, setImagem] = useState("")
     const [preco, setPreco] = useState("")
@@ -18,9 +19,8 @@ function NovoProduto() {
             fetch(`http://localhost:8080/produtos/${params.id}`)
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log("TESTE API" + data)
-                    setTitulo(data.title) 
-                    setImagem(data.img) 
+                    setTitulo(data.title)
+                    setImagem(data.img)
                     setPreco(data.price)
                     setCategoria(data.category)
                 })
@@ -73,9 +73,10 @@ function NovoProduto() {
                 .then((data) => {
                     alert(`Produto: ${titulo} atualizado com sucesso! `)
                     setTitulo("")
-                        setImagem("")
-                        setPreco("")
-                        setCategoria("")
+                    setImagem("")
+                    setPreco("")
+                    setCategoria("")
+                    navigate('/admin/produtos',  {state: {"titulo":  titulo, "description": "atualizado"}} )
                 })
                 .catch((err) => console.log(err))
 
@@ -90,13 +91,13 @@ function NovoProduto() {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log('Success:', data);
                     alert(`Produto: ${titulo} criado com sucesso! `)
                     setTitulo("")
                     setImagem("")
                     setPreco("")
                     setCategoria("")
-
+                    navigate('/admin/produtos',  {state: {"titulo":  titulo, "description" : "criado"}} )
+                    
                 })
                 .catch((error) => {
                     console.error('Error:', error);

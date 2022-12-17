@@ -7,7 +7,9 @@ function CardProduct({img, title, price}){
                 <img className={Style.card_img} src={img} alt={`product-${title}`}/>
             </div>
             <div className={Style.card_main}>
-                <h3 className={Style.card_title}>{title}</h3>
+                <div className={Style.card_title}>
+                    <h3>{title}</h3>
+                </div>
                 <p className={Style.frete_free}>FRETE GRÁTIS</p>
                 <p className={Style.price}>R$ {price}</p>
                 <button className={Style.btn_add}>ADICIONAR NO CARRINHO</button>
