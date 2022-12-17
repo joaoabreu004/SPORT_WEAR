@@ -1,32 +1,40 @@
+.produtoSalvo {
+    background-color: #26BB35;
+    padding: 7px;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+    width: 30vw;
+    position: absolute;
+}
+.inativel{
+    display: none;
+}
+.produloDeletado{
+    background-color: #ff003c;
+    color: #fff;
+    font-weight: bold;
+    width: 30vw;
+    padding: 7px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    margin: 10px 0;
+
+}
+
 .sectionLista {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2em 0;
-
-    .produtoSalvo {
-        display: none;
-        background-color: #26BB35;
-        padding: 7px;
-        border-radius: 2px;
-        color: #fff;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-around;
-        margin: 10px 0;
-        width: 30vw;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    .inativel{
-        transition: 5ms;
-        display: none;
-    }
-
     .buttonSection {
         margin: 1em 0;
         width: 100%;

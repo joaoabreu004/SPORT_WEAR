@@ -13,9 +13,9 @@ function AdminProdutos() {
 
     const [produtos, setProdutos] = useState([])
 
+    const [produtoDeletado, setProdutoDeletado] = useState("")
 
     const { state } = useLocation()
-
 
 
 
@@ -30,13 +30,14 @@ function AdminProdutos() {
     }, []);
 
 
-    const excluirProduto = (id) => {
-        fetch(`http://localhost:8080/produtos/${id}`, {
+    const excluirProduto = (produtoSelecionado ) => {
+        fetch(`http://localhost:8080/produtos/${produtoSelecionado.id}`, {
             method: 'DELETE'
         })
             .then(() => {
+                alert(`PRODUTO: ${produtoSelecionado.title} DELETADO COM SUCESSO!`)
                 const lista = produtos.filter((produto) =>
-                    produto.id !== id
+                    produto.id !== produtoSelecionado.id
                 )
                 setProdutos([...lista])
             })
@@ -58,9 +59,6 @@ function AdminProdutos() {
     }));
 
     const mensagemSalvo = document.querySelector('#mensagemSalvo');
-
-
-
     // useRef
     //useRefretorna um objeto ref mutável cuja .currentpropriedade é inicializada com o argumento passado ( initialValue). O objeto retornado persistirá durante todo o tempo de vida do componente. Permitindo que eu use um elemento do DOM
     const domElement = useRef(null)
@@ -69,17 +67,21 @@ function AdminProdutos() {
     useEffect(() => {
         setTimeout(() => {
             domElement.current.classList.add(`${style.inativel}`)
-        }, 3000);
-        return () => {};
+        }, 4000);
+        return () => { };
     });
-    
-
 
 
 
     return (
-        <section className={style.sectionLista}>
-            <h2>TABELA DE PRODUTOS</h2>
+        <>
+
+            <div className={style.produloDeletado}>
+                <FaTrashAlt/>
+                <p>Produto Camisa Corinhtins Deletado com sucesso!</p>
+                <FaTrashAlt/>
+            </div>
+
             {/* RENDERIZAÇÃO CONDICIONAL */}
             {
                 state != undefined &&
@@ -89,41 +91,44 @@ function AdminProdutos() {
                     <FaCheckCircle />
                 </div>
             }
-            <Paper sx={{ width: '90%', boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2);" }}>
-                <TableContainer sx={{ maxHeight: 440 }}>
-                    <Table stickyHeader aria-label="sticky table">
-                        <TableHead>
-                            <TableRow sx={{ backgroundColor: "#000", color: "#fff" }}>
-                                <StyledTableCell>ID</StyledTableCell>
-                                <StyledTableCell>TITLE</StyledTableCell>
-                                <StyledTableCell>PRICE</StyledTableCell>
-                                <StyledTableCell>CATEGORY</StyledTableCell>
-                                <StyledTableCell>UPDATE</StyledTableCell>
-                                <StyledTableCell>DELETE</StyledTableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {produtos.map(produto =>
-                                <TableRow>
-                                    <StyledTableCell>{produto.id}</StyledTableCell>
-                                    <StyledTableCell>{produto.title}</StyledTableCell>
-                                    <StyledTableCell>{produto.price}</StyledTableCell>
-                                    <StyledTableCell>{produto.category}</StyledTableCell>
-                                    <StyledTableCell sx={{ textAlign: "center" }}><Button color="warning" variant="text"><Link to={`/admin/produtos/novo/${produto.id}`}><FaTools /></Link></Button></StyledTableCell>
-                                    <StyledTableCell sx={{ textAlign: "center" }}><Button onClick={() => excluirProduto(produto.id)} color="error" variant="text"><FaTrashAlt /></Button></StyledTableCell>
+            <section className={style.sectionLista}>
+                <h2>TABELA DE PRODUTOS</h2>
+
+                <Paper sx={{ width: '90%', boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2);" }}>
+                    <TableContainer sx={{ maxHeight: 440 }}>
+                        <Table stickyHeader aria-label="sticky table">
+                            <TableHead>
+                                <TableRow sx={{ backgroundColor: "#000", color: "#fff" }}>
+                                    <StyledTableCell>ID</StyledTableCell>
+                                    <StyledTableCell>TITLE</StyledTableCell>
+                                    <StyledTableCell>PRICE</StyledTableCell>
+                                    <StyledTableCell>CATEGORY</StyledTableCell>
+                                    <StyledTableCell>UPDATE</StyledTableCell>
+                                    <StyledTableCell>DELETE</StyledTableCell>
                                 </TableRow>
-                            )}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-            </Paper>
-            <Stack direction="row" className={style.buttonSection}>
-                <Button variant="contained" className={style.buttonLink}><Link className={style.link} to={`/admin/produtos/novo`}>CADASTRAR PRODUTO</Link></Button>
-            </Stack>
+                            </TableHead>
+                            <TableBody>
+                                {produtos.map(produto =>
+                                    <TableRow>
+                                        <StyledTableCell>{produto.id}</StyledTableCell>
+                                        <StyledTableCell>{produto.title}</StyledTableCell>
+                                        <StyledTableCell>{produto.price}</StyledTableCell>
+                                        <StyledTableCell>{produto.category}</StyledTableCell>
+                                        <StyledTableCell sx={{ textAlign: "center" }}><Button color="warning" variant="text"><Link to={`/admin/produtos/novo/${produto.id}`}><FaTools /></Link></Button></StyledTableCell>
+                                        <StyledTableCell sx={{ textAlign: "center" }}><Button onClick={() => excluirProduto(produto)} color="error" variant="text"><FaTrashAlt /></Button></StyledTableCell>
+                                    </TableRow>
+                                )}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                </Paper>
+                <Stack direction="row" className={style.buttonSection}>
+                    <Button variant="contained" className={style.buttonLink}><Link className={style.link} to={`/admin/produtos/novo`}>CADASTRAR PRODUTO</Link></Button>
+                </Stack>
 
+            </section>
+        </>
 
-
-        </section>
     )
 
 }
