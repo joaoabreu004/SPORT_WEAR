@@ -13,7 +13,6 @@ function AdminProdutos() {
 
     const [produtos, setProdutos] = useState([])
 
-    const [produtoDeletado, setProdutoDeletado] = useState("")
 
     const { state } = useLocation()
 
@@ -74,14 +73,7 @@ function AdminProdutos() {
 
 
     return (
-        <>
-
-            <div className={style.produloDeletado}>
-                <FaTrashAlt/>
-                <p>Produto Camisa Corinhtins Deletado com sucesso!</p>
-                <FaTrashAlt/>
-            </div>
-
+        <main>
             {/* RENDERIZAÇÃO CONDICIONAL */}
             {
                 state != undefined &&
@@ -127,7 +119,7 @@ function AdminProdutos() {
                 </Stack>
 
             </section>
-        </>
+        </main>
 
     )
 

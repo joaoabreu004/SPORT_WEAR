@@ -5,7 +5,7 @@ import ListaProdutos from '../ListaProdutos'
 function Produtos({titulos}) {
     return (
         <section className={style.produtos_section}>
-            <h2>{titulos}</h2>
+            <h2 className={style.produtos_section_title}>{titulos}</h2>
             <ListaProdutos/>
         </section>
 

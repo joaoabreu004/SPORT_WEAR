@@ -1,0 +1,18 @@
+.propadanda__section {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    .div__img {
+        background-color: blue;
+        width: 40%;
+        height: max-content;
+        position: relative;
+        left: 60%;
+        .propadanda__img {
+            position: relative;
+            right: 20%;
+            height: 50vh;
+        }
+    }
+}
