@@ -1,6 +1,6 @@
 import styles from './Propaganda.module.scss'
 import imgPropaganda from '../../img/img_propaganda.png'
-import {FaArrowRight} from "react-icons/fa"
+import {BsArrowRight} from "react-icons/bs"
 
 function Propaganda() {
     return (
@@ -14,11 +14,12 @@ function Propaganda() {
 
                     E MUITO MAIS AQUI NA SPORT WEAR!
                 </p>
-                <p>SURPEENDA COM O MELHOR DO ESPORTE</p>
-                <button>VER MAIS <FaArrowRight/> </button>
+                <p>SURPREENDA COM O MELHOR DO ESPORTE</p>
+                <button className={styles.button}><i>VER MAIS</i></button>
             </div>
 
             <div className={styles.propadanda__section__imagem}>
+                <div className={styles.propadanda__section__background}></div>
                 <img src={imgPropaganda} alt="Imagem Propaganda" className={styles.img}/>
             </div>
 

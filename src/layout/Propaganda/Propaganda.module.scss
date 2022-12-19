@@ -12,12 +12,40 @@
         display: flex;
         flex-direction: column;
         text-align: left;
-        font-size: 25px;
+        font-size: 30px;
     }
     .propadanda__section__imagem{
         height: 50vh;
+        display: flex;
+        align-items: flex-end;
         .img{
             height: 100%;
+            z-index: 2;
+            position: relative;
+        }
+        .propadanda__section__background{
+            width: 300px;
+            height: 350px;
+            right: 50px;
+            background: linear-gradient(0deg, rgba(208,46,46,1) 20%, rgba(236,79,79,1) 70%);
+            position: absolute;
         }
     }
+    .button{
+        width: 50%; 
+        font-size: 20px;
+        padding: 10px;
+        border: none; 
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(0deg, rgba(220,21,21,1) 16%, rgba(219,53,53,1) 53%, rgba(200,53,53,1) 68%, rgba(172,50,50,1) 82%);
+        color: #fff;
+        text-align: right;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+   
 }
