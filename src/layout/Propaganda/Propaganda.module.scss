@@ -1,18 +1,23 @@
 .propadanda__section {
     height: max-content;
     display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    .div__img {
-        background-color: blue;
-        width: 40%;
-        height: max-content;
-        position: relative;
-        left: 60%;
-        .propadanda__img {
-            position: relative;
-            right: 20%;
-            height: 50vh;
+    margin: 0 6em;
+    padding: 0 1em;
+    background-color: #1A1A2E;
+    display: flex; 
+    justify-content: space-between;
+    .propadanda__section__textos{
+        color: #fff;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-size: 25px;
+    }
+    .propadanda__section__imagem{
+        height: 50vh;
+        .img{
+            height: 100%;
         }
     }
 }
